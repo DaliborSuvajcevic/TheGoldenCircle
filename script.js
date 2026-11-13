@@ -8,7 +8,7 @@ const products = [
     category: "TRADING / EDUCATION",
     description: "A clear introduction to forex, the market structure and the foundations behind my approach.",
     price: "FREE",
-    image: "assets/products/starter-kit.png",
+    image: "assets/products/starter-kit.webp",
     link: "https://goldenboyy.gumroad.com/l/xvexk"
   },
   {
@@ -16,7 +16,7 @@ const products = [
     category: "TRADING / EDUCATION",
     description: "The complete trading framework and strategy, organized into one practical masterclass.",
     price: "299€",
-    image: "assets/products/masterclass.png",
+    image: "assets/products/masterclass.webp",
     link: "https://goldenboyy.gumroad.com/l/nwidl"
   },
   {
@@ -24,15 +24,15 @@ const products = [
     category: "AI / DIGITAL",
     description: "Six practical prompts built around content, brand clarity and monetization.",
     price: "4.99€",
-    image: "assets/products/ai-prompts.png",
+    image: "assets/products/ai-prompts.webp",
     link: "https://goldenboyy.gumroad.com/l/wfoepq"
   },
   {
     name: "Golden Highlight Packs",
     category: "DESIGN / DIGITAL",
-    description: "Curated Instagram highlight icon packs for a cleaner, more intentional profile identity. LIMITIED EDITION",
+    description: "Curated Instagram highlight icon packs for a cleaner, more intentional profile identity. LIMITED EDITION",
     price: "4.99€",
-    image: "assets/products/highlights.png",
+    image: "assets/products/highlights.webp",
     link: "https://goldenboyy.gumroad.com/l/vqoem"
   }
 ];
