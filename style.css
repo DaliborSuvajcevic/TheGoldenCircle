@@ -95,3 +95,5 @@ body { line-height: 1.65; }
 .risk-note,.footer-disclaimer{max-width:720px;margin:40px 0 0;color:#8d8981;font-family:var(--mono);font-size:11px;letter-spacing:.04em;line-height:1.9}
 .footer-disclaimer{max-width:var(--max);margin:28px auto 0;padding-top:24px;border-top:1px solid var(--line)}
 @media (max-width:700px){.risk-note,.footer-disclaimer{font-size:11px;line-height:1.85;margin-top:28px}}
+@media (max-width:900px){.display-copy{line-height:1.3;letter-spacing:-.015em}}
+@media (max-width:650px){.display-copy{font-size:22px;line-height:1.5;letter-spacing:-.005em;font-weight:400}}
