@@ -53,7 +53,7 @@ function renderProducts() {
     const safeDescription = escapeHTML(product.description);
     const safePrice = escapeHTML(product.price);
     const link = isUsableLink(product.link)
-      ? `<a class="product-link" href="${escapeHTML(product.link)}" target="_blank" rel="noopener noreferrer">View product ↗</a>`
+      ? `<a class="product-link" href="${escapeHTML(product.link)}" target="_blank" rel="noopener noreferrer">View product</a>`
       : `<span class="product-link product-link-disabled" aria-label="Product link not configured">Coming soon</span>`;
 
     return `
