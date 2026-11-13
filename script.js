@@ -30,7 +30,7 @@ const products = [
   {
     name: "Golden Highlight Packs",
     category: "DESIGN / DIGITAL",
-    description: "Curated Instagram highlight icon packs for a cleaner, more intentional profile identity. LIMITIED EDITION",
+    description: "Curated Instagram highlight icon packs for a cleaner, more intentional profile identity. LIMITED EDITION",
     price: "4.99€",
     image: "assets/products/highlights.png",
     link: "https://goldenboyy.gumroad.com/l/vqoem"
