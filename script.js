@@ -170,6 +170,14 @@ function setYear() {
   if (year) year.textContent = new Date().getFullYear();
 }
 
+const ACCESS_MAIL = "suvajcevicdaca@gmail.com";
+function setAccessLink() {
+  const btn = document.getElementById("access-btn");
+  if (!btn) return;
+  const body = t("mail_body").replace(/\n/g, "\r\n");
+  btn.href = "mailto:" + ACCESS_MAIL + "?subject=" + encodeURIComponent(t("mail_subject")) + "&body=" + encodeURIComponent(body);
+}
+
 function applyLang(lang, save = true) {
   if (!I18N[lang]) lang = "en";
   currentLang = lang;
@@ -191,6 +199,7 @@ function applyLang(lang, save = true) {
   toggle?.setAttribute("aria-label", nav?.classList.contains("open") ? t("nav_close") : t("nav_open"));
   renderProducts();
   setYear();
+  setAccessLink();
   if (save) { try { window.localStorage.setItem(LANG_KEY, lang); } catch (e) { /* ignore */ } }
 }
 
