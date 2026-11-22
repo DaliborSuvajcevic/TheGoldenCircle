@@ -5,7 +5,8 @@ This package preserves the original black-and-gold visual identity, layout, cont
 ## Files
 - `index.html` — page structure
 - `style.css` — visual styles and responsive typography refinements
-- `script.js` — product rendering, navigation, reveal effects, and interactions
+- `script.js` — product rendering, navigation, reveal effects, language switch and interactions
+- `i18n.js` — all site text in English (`en`) and Serbian (`sr`). Edit text here, keep both languages in sync
 - `assets/` — place your original assets folder here (not included in the supplied upload)
 
 ## Before publishing

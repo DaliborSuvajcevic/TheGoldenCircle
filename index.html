@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=20261122" />
   <link rel="icon" type="image/png" href="assets/golden-crown.png">
 </head>
 <body>
@@ -26,7 +26,7 @@
   <div class="cursor-glow" aria-hidden="true"></div>
 
   <header class="site-header" id="top">
-    <a class="brand" href="#top" aria-label="The Golden Circle home">
+    <a class="brand" href="#top" aria-label="The Golden Circle home" data-i18n-attr="aria-label:aria_home">
       <span class="brand-mark"><img src="assets/golden-crown.jpeg" alt="" /></span>
       <span class="brand-name">THE GOLDEN CIRCLE</span>
     </a>
@@ -35,13 +35,19 @@
       <span></span><span></span>
     </button>
 
-    <nav class="nav" id="main-navigation" aria-label="Main navigation">
-      <a href="#philosophy">Philosophy</a>
-      <a href="#build">Build</a>
-      <a href="#shop">Shop</a>
-      <a href="#community">Community</a>
-      <a href="#about">About</a>
+    <nav class="nav" id="main-navigation" aria-label="Main navigation" data-i18n-attr="aria-label:aria_nav">
+      <a href="#philosophy" data-i18n="nav_philosophy">Philosophy</a>
+      <a href="#build" data-i18n="nav_build">Build</a>
+      <a href="#shop" data-i18n="nav_shop">Shop</a>
+      <a href="#community" data-i18n="nav_community">Community</a>
+      <a href="#about" data-i18n="nav_about">About</a>
     </nav>
+
+    <div class="lang-switch" role="group" aria-label="Language" data-i18n-attr="aria-label:aria_lang">
+      <button class="lang-btn" type="button" data-lang="en" aria-pressed="true">EN</button>
+      <span aria-hidden="true">/</span>
+      <button class="lang-btn" type="button" data-lang="sr" aria-pressed="false">SR</button>
+    </div>
   </header>
 
   <main>
@@ -49,60 +55,60 @@
     <section class="hero section">
       <div class="hero-grid">
         <div class="hero-copy reveal">
-          <p class="eyebrow">PERSONAL OPERATING PHILOSOPHY <span>01</span></p>
-          <h1>Build the person.<br /><em>Build the life.</em></h1>
-          <p class="hero-lead">You do not need every answer. Build the mindset, discipline and skills to solve better problems, then turn what you learn into something real.</p>
+          <p class="eyebrow" data-i18n-html="hero_eyebrow">PERSONAL OPERATING PHILOSOPHY <span>01</span></p>
+          <h1 data-i18n-html="hero_title">Build the person.<br /><em>Build the life.</em></h1>
+          <p class="hero-lead" data-i18n="hero_lead">You do not need every answer. Build the mindset, discipline and skills to solve better problems, then turn what you learn into something real.</p>
           <div class="hero-actions">
-            <a class="btn btn-gold" href="#philosophy">Enter the Circle</a>
-            <a class="text-link" href="#build">See what I build</a>
+            <a class="btn btn-gold" href="#philosophy" data-i18n="hero_cta1">Enter the Circle</a>
+            <a class="text-link" href="#build" data-i18n="hero_cta2">See what I build</a>
           </div>
           <div class="hero-meta">
-            <span>Mindset</span><i></i><span>Discipline</span><i></i><span>Skills</span><i></i><span>Creation</span><i></i><span>Freedom</span>
+            <span data-i18n="m1">Mindset</span><i></i><span data-i18n="m2">Discipline</span><i></i><span data-i18n="m3">Skills</span><i></i><span data-i18n="m4">Creation</span><i></i><span data-i18n="m5">Freedom</span>
           </div>
         </div>
 
         <div class="hero-media reveal">
           <div class="hero-image-wrap">
-            <img src="assets/daca-microphone.jpeg" alt="Dača speaking into a microphone" />
+            <img src="assets/daca-microphone.jpeg" alt="Dača speaking into a microphone" data-i18n-attr="alt:alt_hero" />
             <div class="image-vignette"></div>
             <div class="hero-stamp">
               <img src="assets/golden-crown.jpeg" alt="" />
-              <span>BUILD<br />WITH INTENTION</span>
+              <span data-i18n-html="stamp">BUILD<br />WITH INTENTION</span>
             </div>
             <span class="image-index">THE GOLDEN CIRCLE / 001</span>
           </div>
         </div>
       </div>
-      <a class="scroll-cue" href="#philosophy"><span>SCROLL</span><i></i></a>
+      <a class="scroll-cue" href="#philosophy"><span data-i18n="scroll">SCROLL</span><i></i></a>
     </section>
 
     <!-- PHILOSOPHY -->
     <section class="philosophy section" id="philosophy">
       <div class="section-head reveal">
-        <p class="eyebrow">THE IDEA <span>02</span></p>
-        <h2>One philosophy.<br /><em>Many ways to build.</em></h2>
+        <p class="eyebrow" data-i18n-html="ph_eyebrow">THE IDEA <span>02</span></p>
+        <h2 data-i18n-html="ph_title">One philosophy.<br /><em>Many ways to build.</em></h2>
       </div>
 
       <div class="philosophy-intro reveal">
-        <p class="display-copy">The Golden Circle is about becoming the person capable of building the life you want. Not by waiting for the perfect moment, but by improving how you think, act and create.</p>
-        <p class="muted-copy">Trading, AI, digital products, client work and community are different applications of the same philosophy. Learn deliberately. Take responsibility for your decisions. Build systems that make good work repeatable. <strong>The industry can change. The standard stays.</strong></p>
+        <p class="display-copy" data-i18n="ph_display">The Golden Circle is about becoming the person capable of building the life you want. Not by waiting for the perfect moment, but by improving how you think, act and create.</p>
+        <p class="muted-copy" data-i18n-html="ph_muted">Trading, AI, digital products, client work and community are different applications of the same philosophy. Learn deliberately. Take responsibility for your decisions. Build systems that make good work repeatable. <strong>The industry can change. The standard stays.</strong></p>
       </div>
 
-      <div class="circle-diagram reveal" aria-label="The Golden Circle framework">
+      <div class="circle-diagram reveal" aria-label="The Golden Circle framework" data-i18n-attr="aria-label:aria_framework">
         <div class="diagram-center"><span>THE<br />GOLDEN<br />CIRCLE</span></div>
-        <div class="diagram-node node-1"><small>01</small><strong>MINDSET</strong></div>
-        <div class="diagram-node node-2"><small>02</small><strong>DISCIPLINE</strong></div>
-        <div class="diagram-node node-3"><small>03</small><strong>SKILLS</strong></div>
-        <div class="diagram-node node-4"><small>04</small><strong>CREATION</strong></div>
-        <div class="diagram-node node-5"><small>05</small><strong>FREEDOM</strong></div>
+        <div class="diagram-node node-1"><small>01</small><strong data-i18n="n1">MINDSET</strong></div>
+        <div class="diagram-node node-2"><small>02</small><strong data-i18n="n2">DISCIPLINE</strong></div>
+        <div class="diagram-node node-3"><small>03</small><strong data-i18n="n3">SKILLS</strong></div>
+        <div class="diagram-node node-4"><small>04</small><strong data-i18n="n4">CREATION</strong></div>
+        <div class="diagram-node node-5"><small>05</small><strong data-i18n="n5">FREEDOM</strong></div>
       </div>
 
       <div class="principles-grid">
-        <article class="principle reveal"><span>01</span><h3>Mindset</h3><p>Question your assumptions. See the situation clearly and focus on what you can influence, especially your next decision.</p></article>
-        <article class="principle reveal"><span>02</span><h3>Discipline</h3><p>Motivation comes and goes. Build habits, standards and systems that help you follow through when motivation is absent.</p></article>
-        <article class="principle reveal"><span>03</span><h3>Skills</h3><p>Build practical skills through study, repetition and feedback. Knowledge matters most when you can apply it to real problems.</p></article>
-        <article class="principle reveal"><span>04</span><h3>Creation</h3><p>Turn what you learn into useful work: tools, products, services and systems that solve real problems for other people.</p></article>
-        <article class="principle reveal"><span>05</span><h3>Freedom</h3><p>Create more options and greater control over your time, work and direction. Freedom is built through capability and responsibility; it is not guaranteed, and it is never just a slogan.</p></article>
+        <article class="principle reveal"><span>01</span><h3 data-i18n="pr1_h">Mindset</h3><p data-i18n="pr1_p">Question your assumptions. See the situation clearly and focus on what you can influence, especially your next decision.</p></article>
+        <article class="principle reveal"><span>02</span><h3 data-i18n="pr2_h">Discipline</h3><p data-i18n="pr2_p">Motivation comes and goes. Build habits, standards and systems that help you follow through when motivation is absent.</p></article>
+        <article class="principle reveal"><span>03</span><h3 data-i18n="pr3_h">Skills</h3><p data-i18n="pr3_p">Build practical skills through study, repetition and feedback. Knowledge matters most when you can apply it to real problems.</p></article>
+        <article class="principle reveal"><span>04</span><h3 data-i18n="pr4_h">Creation</h3><p data-i18n="pr4_p">Turn what you learn into useful work: tools, products, services and systems that solve real problems for other people.</p></article>
+        <article class="principle reveal"><span>05</span><h3 data-i18n="pr5_h">Freedom</h3><p data-i18n="pr5_p">Create more options and greater control over your time, work and direction. Freedom is built through capability and responsibility; it is not guaranteed, and it is never just a slogan.</p></article>
       </div>
     </section>
 
@@ -110,32 +116,32 @@
     <section class="build section" id="build">
       <div class="section-head split reveal">
         <div>
-          <p class="eyebrow">THE ECOSYSTEM <span>03</span></p>
-          <h2>Different disciplines.<br /><em>One standard.</em></h2>
+          <p class="eyebrow" data-i18n-html="b_eyebrow">THE ECOSYSTEM <span>03</span></p>
+          <h2 data-i18n-html="b_title">Different disciplines.<br /><em>One standard.</em></h2>
         </div>
-        <p class="section-note">These projects are different expressions of one standard: learn by doing, improve through feedback, and turn useful knowledge into systems other people can use.</p>
+        <p class="section-note" data-i18n="b_note">These projects are different expressions of one standard: learn by doing, improve through feedback, and turn useful knowledge into systems other people can use.</p>
       </div>
 
       <div class="ecosystem-grid">
         <a class="eco-card trading reveal" href="#trading-tools">
-          <div class="card-top"><span>01</span><span>MARKETS</span></div>
-          <div><h3>Trading</h3><p>Education, strategy and proprietary tools built from years of market work.</p></div>
-          <div class="card-bottom"><span>Explore systems</span></div>
+          <div class="card-top"><span>01</span><span data-i18n="c1_tag">MARKETS</span></div>
+          <div><h3 data-i18n="c1_h">Trading</h3><p data-i18n="c1_p">Education, strategy and proprietary tools built from years of market work.</p></div>
+          <div class="card-bottom"><span data-i18n="c1_cta">Explore systems</span></div>
         </a>
         <a class="eco-card ai reveal" href="#shop">
-          <div class="card-top"><span>02</span><span>TECHNOLOGY</span></div>
-          <div><h3>AI</h3><p>Practical prompts, workflows and creative systems that turn AI into leverage.</p></div>
-          <div class="card-bottom"><span>Explore products</span></div>
+          <div class="card-top"><span>02</span><span data-i18n="c2_tag">TECHNOLOGY</span></div>
+          <div><h3 data-i18n="c2_h">AI</h3><p data-i18n="c2_p">Practical prompts, workflows and creative systems that turn AI into leverage.</p></div>
+          <div class="card-bottom"><span data-i18n="c2_cta">Explore products</span></div>
         </a>
         <a class="eco-card products reveal" href="#shop">
-          <div class="card-top"><span>03</span><span>CREATION</span></div>
-          <div><h3>Digital Products</h3><p>Useful assets and educational products designed to move ideas from screen to reality.</p></div>
-          <div class="card-bottom"><span>Open the shop</span></div>
+          <div class="card-top"><span>03</span><span data-i18n="c3_tag">CREATION</span></div>
+          <div><h3 data-i18n="c3_h">Digital Products</h3><p data-i18n="c3_p">Useful assets and educational products designed to move ideas from screen to reality.</p></div>
+          <div class="card-bottom"><span data-i18n="c3_cta">Open the shop</span></div>
         </a>
         <a class="eco-card services reveal" href="https://daliborsuvajcevic.github.io/Productlab/" target="_blank" rel="noopener">
-          <div class="card-top"><span>04</span><span>CLIENT WORK</span></div>
-          <div><h3>Product Lab</h3><p>Premium AI-powered product creative for e-commerce brands that need better visual content.</p></div>
-          <div class="card-bottom"><span>Visit Product Lab</span></div>
+          <div class="card-top"><span>04</span><span data-i18n="c4_tag">CLIENT WORK</span></div>
+          <div><h3 data-i18n="c4_h">Product Lab</h3><p data-i18n="c4_p">Premium AI-powered product creative for e-commerce brands that need better visual content.</p></div>
+          <div class="card-bottom"><span data-i18n="c4_cta">Visit Product Lab</span></div>
         </a>
       </div>
     </section>
@@ -144,34 +150,34 @@
     <section class="systems section" id="trading-tools">
       <div class="section-head split reveal">
         <div>
-          <p class="eyebrow">SYSTEMS I BUILT <span>04</span></p>
-          <h2>Ideas are cheap.<br /><em>Systems make them repeatable.</em></h2>
+          <p class="eyebrow" data-i18n-html="s_eyebrow">SYSTEMS I BUILT <span>04</span></p>
+          <h2 data-i18n-html="s_title">Ideas are cheap.<br /><em>Systems make them repeatable.</em></h2>
         </div>
-        <p class="section-note">I build tools around process, risk and consistency, because improvement becomes more deliberate when decisions and behavior can be measured.</p>
+        <p class="section-note" data-i18n="s_note">I build tools around process, risk and consistency, because improvement becomes more deliberate when decisions and behavior can be measured.</p>
       </div>
 
       <div class="systems-list">
         <a class="system-row reveal" href="https://daliborsuvajcevic.github.io/Golden-trading-journal/" target="_blank" rel="noopener">
-          <div class="system-no">01</div><div><span>TRADING / JOURNAL</span><h3>Golden Trading Journal</h3><p>Track trades, performance, discipline, emotions, drawdown and the patterns behind your results.</p></div>
+          <div class="system-no">01</div><div><span data-i18n="s1_tag">TRADING / JOURNAL</span><h3>Golden Trading Journal</h3><p data-i18n="s1_p">Track trades, performance, discipline, emotions, drawdown and the patterns behind your results.</p></div>
         </a>
         <a class="system-row reveal" href="https://daliborsuvajcevic.github.io/Gold-Risk-Calculator/" target="_blank" rel="noopener">
-          <div class="system-no">02</div><div><span>TRADING / RISK</span><h3>Gold Risk Calculator</h3><p>Calculate position size and risk for XAU/USD before the trade, not after the mistake.</p></div>
+          <div class="system-no">02</div><div><span data-i18n="s2_tag">TRADING / RISK</span><h3>Gold Risk Calculator</h3><p data-i18n="s2_p">Calculate position size and risk for XAU/USD before the trade, not after the mistake.</p></div>
         </a>
         <a class="system-row reveal" href="https://daliborsuvajcevic.github.io/Process/" target="_blank" rel="noopener">
-          <div class="system-no">03</div><div><span>PROCESS / DISCIPLINE</span><h3>Process</h3><p>A simple system for tracking the process itself, because outcomes are easier to improve when the behavior is visible.</p></div>
+          <div class="system-no">03</div><div><span data-i18n="s3_tag">PROCESS / DISCIPLINE</span><h3>Process</h3><p data-i18n="s3_p">A simple system for tracking the process itself, because outcomes are easier to improve when the behavior is visible.</p></div>
         </a>
       </div>
-      <p class="risk-note reveal">Trading involves a substantial risk of loss and is not suitable for everyone. Nothing on this site is financial advice. Tools and education are provided for learning purposes, and no result is guaranteed.</p>
+      <p class="risk-note reveal" data-i18n="risk">Trading involves a substantial risk of loss and is not suitable for everyone. Nothing on this site is financial advice. Tools and education are provided for learning purposes, and no result is guaranteed.</p>
     </section>
 
     <!-- SHOP -->
     <section class="shop section" id="shop">
       <div class="section-head split reveal">
         <div>
-          <p class="eyebrow">THE SHOP <span>05</span></p>
-          <h2>Things I've built.<br /><em>Put them to work.</em></h2>
+          <p class="eyebrow" data-i18n-html="sh_eyebrow">THE SHOP <span>05</span></p>
+          <h2 data-i18n-html="sh_title">Things I've built.<br /><em>Put them to work.</em></h2>
         </div>
-        <p class="section-note">Education, digital assets and systems. No filler. Only things with a job to do.</p>
+        <p class="section-note" data-i18n="sh_note">Education, digital assets and systems. No filler. Only things with a job to do.</p>
       </div>
       <div id="product-grid" class="product-grid"></div>
     </section>
@@ -181,13 +187,13 @@
       <div class="community-panel reveal">
         <div class="community-mark"><img src="assets/community.png" alt="" /></div>
         <div class="community-copy">
-          <p class="eyebrow">THE COMMUNITY <span>06</span></p>
-          <h2>Built by one.<br /><em>Experienced together.</em></h2>
-          <p>More than 80 people are already part of the Discord community: gaming, talking, competing and spending time together.</p>
-          <p class="muted-copy">It started as a place to hang out. That matters too. A serious philosophy does not require a serious face all the time.</p>
-          <a class="btn btn-outline" href="https://discord.gg/uK7sNY3RsX" data-placeholder="discord">Enter the Discord</a>
+          <p class="eyebrow" data-i18n-html="cm_eyebrow">THE COMMUNITY <span>06</span></p>
+          <h2 data-i18n-html="cm_title">Built by one.<br /><em>Experienced together.</em></h2>
+          <p data-i18n="cm_p1">More than 80 people are already part of the Discord community: gaming, talking, competing and spending time together.</p>
+          <p class="muted-copy" data-i18n="cm_p2">It started as a place to hang out. That matters too. A serious philosophy does not require a serious face all the time.</p>
+          <a class="btn btn-outline" href="https://discord.gg/uK7sNY3RsX" data-placeholder="discord" data-i18n="cm_btn">Enter the Discord</a>
         </div>
-        <div class="community-stat"><strong>80+</strong><span>MEMBERS</span></div>
+        <div class="community-stat"><strong>80+</strong><span data-i18n="members">MEMBERS</span></div>
       </div>
     </section>
 
@@ -195,16 +201,16 @@
     <section class="about section" id="about">
       <div class="about-grid">
         <div class="about-image reveal">
-          <img src="assets/daca-lifestyle.jpg" alt="Dača in a lifestyle setting" />
+          <img src="assets/daca-lifestyle.jpg" alt="Dača in a lifestyle setting" data-i18n-attr="alt:ab_alt" />
           <span class="image-index">THE PERSON / 007</span>
         </div>
         <div class="about-copy reveal">
-          <p class="eyebrow">THE PERSON BEHIND IT <span>07</span></p>
-          <h2>I am not here to pretend I have<br /><em>finished the journey.</em></h2>
-          <p class="lead">It is a record of learning, building, testing and improving in public.</p>
-          <p>I work across trading, AI, digital products and creative services. I build systems, test ideas, make mistakes and refine what works. I do not see these as separate identities, but as different ways to develop capability and create value.</p>
-          <p class="muted-copy">I do not need to present a perfect result. I need to be honest about the process, take responsibility for my decisions and keep becoming more capable, then build from there.</p>
-          <a class="text-link" href="https://instagram.com/onegoldenboyy" target="_blank" rel="noopener">Follow the build on Instagram</a>
+          <p class="eyebrow" data-i18n-html="ab_eyebrow">THE PERSON BEHIND IT <span>07</span></p>
+          <h2 data-i18n-html="ab_title">I am not here to pretend I have<br /><em>finished the journey.</em></h2>
+          <p class="lead" data-i18n="ab_lead">It is a record of learning, building, testing and improving in public.</p>
+          <p data-i18n="ab_p1">I work across trading, AI, digital products and creative services. I build systems, test ideas, make mistakes and refine what works. I do not see these as separate identities, but as different ways to develop capability and create value.</p>
+          <p class="muted-copy" data-i18n="ab_p2">I do not need to present a perfect result. I need to be honest about the process, take responsibility for my decisions and keep becoming more capable, then build from there.</p>
+          <a class="text-link" href="https://instagram.com/onegoldenboyy" target="_blank" rel="noopener" data-i18n="ab_link">Follow the build on Instagram</a>
         </div>
       </div>
     </section>
@@ -214,23 +220,24 @@
       <div class="final-line"></div>
       <img class="cta-crown" src="assets/golden-crown.jpeg" alt="" />
       <p class="eyebrow">THE GOLDEN CIRCLE <span>08</span></p>
-      <h2>Become capable.<br /><em>Then build.</em></h2>
-      <p>Mindset → Discipline → Skills → Creation → Freedom</p>
-      <a class="btn btn-gold" href="https://instagram.com/onegoldenboyy" target="_blank" rel="noopener">Follow the journey</a>
+      <h2 data-i18n-html="ct_title">Become capable.<br /><em>Then build.</em></h2>
+      <p data-i18n="ct_flow">Mindset → Discipline → Skills → Creation → Freedom</p>
+      <a class="btn btn-gold" href="https://instagram.com/onegoldenboyy" target="_blank" rel="noopener" data-i18n="ct_btn">Follow the journey</a>
     </section>
   </main>
 
   <footer class="footer">
     <div class="footer-top">
       <div class="footer-brand"><span class="brand-mark small"><img src="assets/golden-crown.jpeg" alt="" /></span><strong>THE GOLDEN CIRCLE</strong></div>
-      <p>Mindset / Discipline / Skills / Creation / Freedom</p>
-      <div class="footer-links"><a href="https://instagram.com/onegoldenboyy" target="_blank" rel="noopener">Instagram</a><a href="https://daliborsuvajcevic.github.io/Productlab/" target="_blank" rel="noopener">Product Lab</a><a href="#community">Community</a></div>
+      <p data-i18n="f_flow">Mindset / Discipline / Skills / Creation / Freedom</p>
+      <div class="footer-links"><a href="https://instagram.com/onegoldenboyy" target="_blank" rel="noopener">Instagram</a><a href="https://daliborsuvajcevic.github.io/Productlab/" target="_blank" rel="noopener">Product Lab</a><a href="#community" data-i18n="f_community">Community</a></div>
     </div>
-    <p class="footer-disclaimer">Risk warning: trading forex and other leveraged products carries a high level of risk and can result in the loss of your capital. All content is educational and is not financial advice. Past performance does not guarantee future results.</p>
-    <div class="footer-bottom"><span>Built with intention.</span><span>© <span id="year"></span> The Golden Circle.</span></div>
+    <p class="footer-disclaimer" data-i18n="f_disclaimer">Risk warning: trading forex and other leveraged products carries a high level of risk and can result in the loss of your capital. All content is educational and is not financial advice. Past performance does not guarantee future results.</p>
+    <div class="footer-bottom"><span data-i18n="f_built">Built with intention.</span><span data-i18n-html="f_copy">© <span id="year"></span> The Golden Circle.</span></div>
   </footer>
 
-  <div class="toast" role="status" aria-live="polite">Add your Discord invite link in <strong>index.html</strong>.</div>
-  <script src="script.js"></script>
+  <div class="toast" role="status" aria-live="polite" data-i18n-html="toast">Add your Discord invite link in <strong>index.html</strong>.</div>
+  <script src="i18n.js?v=20261122"></script>
+  <script src="script.js?v=20261122"></script>
 </body>
 </html>
