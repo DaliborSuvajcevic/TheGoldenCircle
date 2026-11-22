@@ -159,3 +159,6 @@ strong,b{font-weight:600}
 /* Community: space between the text and the Discord button */
 .community-copy .btn{margin-top:36px}
 @media(max-width:650px){.community-copy .btn{margin-top:30px}}
+
+/* Headings: older per-element weights (650/700) overrode the Brand Kit weight; force Playfair 500. */
+.hero h1,.section-head h2,.about-copy h2,.community-copy h2,.final-cta h2,.eco-card h3,.principle h3,.system-row h3,.product-info h3,.community-stat strong{font-weight:500}
