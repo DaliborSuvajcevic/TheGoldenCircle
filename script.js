@@ -207,9 +207,10 @@ document.querySelectorAll('a.brand[href="#top"]').forEach(a=>a.addEventListener(
 /* Scroll motion: gold progress line, soft image parallax, staggered reveals. */
 (function(){
   const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fine=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   if(reduce) return;
   const bar=document.createElement('div'); bar.className='scroll-progress'; bar.setAttribute('aria-hidden','true'); document.body.appendChild(bar);
-  const imgs=[...document.querySelectorAll('.hero-image-wrap>img,.about-image img')];
+  const imgs=fine?[...document.querySelectorAll('.hero-image-wrap>img,.about-image img')]:[];
   let ticking=false;
   function update(){
     ticking=false;
@@ -228,7 +229,7 @@ document.querySelectorAll('a.brand[href="#top"]').forEach(a=>a.addEventListener(
   document.querySelectorAll('.reveal').forEach(el=>{
     const sibs=[...el.parentElement.children].filter(c=>c.classList.contains('reveal'));
     const i=sibs.indexOf(el);
-    if(i>0 && !el.classList.contains('visible')){
+    if(fine && i>0 && !el.classList.contains('visible')){
       el.style.transitionDelay=Math.min(i,5)*90+'ms';
       setTimeout(()=>{el.style.transitionDelay=''},2500+i*90);
     }
