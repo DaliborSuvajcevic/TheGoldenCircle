@@ -190,3 +190,10 @@ strong,b{font-weight:600}
 @keyframes nodeLit{0%{color:var(--c0)}3%,17%{color:var(--gold)}20%,100%{color:var(--c0)}}
 .circle-diagram:not(.in-view) .orbit,.circle-diagram:not(.in-view) .diagram-node *{animation-play-state:paused}
 @media(max-width:650px){.orbit.o1{width:300px;height:300px;margin:-150px 0 0 -150px}.orbit.o2{width:205px;height:205px;margin:-102px 0 0 -102px}}
+
+/* Hero: layout must not depend on the language. Columns can't grow from long text (Serbian), label can't run into the stamp. */
+.hero-grid{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr)}
+.hero-meta{flex-wrap:wrap;row-gap:8px}
+.image-index{max-width:calc(100% - 184px);white-space:normal;line-height:1.6}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
+@media(max-width:650px){.image-index{max-width:calc(100% - 150px)}}
