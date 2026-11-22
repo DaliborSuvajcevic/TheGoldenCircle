@@ -162,3 +162,11 @@ strong,b{font-weight:600}
 
 /* Headings: older per-element weights (650/700) overrode the Brand Kit weight; force Playfair 500. */
 .hero h1,.section-head h2,.about-copy h2,.community-copy h2,.final-cta h2,.eco-card h3,.principle h3,.system-row h3,.product-info h3,.community-stat strong{font-weight:500}
+
+/* Mobile: hero label must never run into the stamp */
+@media(max-width:650px){
+  .hero-stamp{width:104px;height:104px;right:14px;bottom:14px;gap:6px}
+  .hero-stamp img{width:30px;height:30px}
+  .hero-stamp span{font-size:10px;letter-spacing:.1em;line-height:1.5}
+  .image-index{left:14px;bottom:14px;max-width:calc(100% - 150px);letter-spacing:.1em;line-height:1.6;white-space:normal}
+}
