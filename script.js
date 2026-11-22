@@ -235,3 +235,22 @@ document.querySelectorAll('a.brand[href="#top"]').forEach(a=>a.addEventListener(
     }
   });
 })();
+
+
+/* Circle diagram: run animations only while visible. Count-up for the member number. */
+(function(){
+  if(!('IntersectionObserver' in window)) return;
+  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const dia=document.querySelector('.circle-diagram');
+  if(dia){ new IntersectionObserver(es=>es.forEach(e=>dia.classList.toggle('in-view',e.isIntersecting))).observe(dia); }
+  const num=document.querySelector('[data-count]');
+  if(num && !reduce){
+    const target=+num.dataset.count, suffix=num.dataset.suffix||'';
+    let done=false;
+    new IntersectionObserver((es,o)=>{ if(done||!es[0].isIntersecting) return; done=true; o.disconnect();
+      const t0=performance.now(), dur=1300;
+      (function tick(t){ const p=Math.min((t-t0)/dur,1), v=Math.round(target*(1-Math.pow(1-p,3))); num.textContent=v+suffix; if(p<1) requestAnimationFrame(tick); })(t0);
+    },{threshold:.6}).observe(num);
+    num.textContent='0'+suffix;
+  }
+})();

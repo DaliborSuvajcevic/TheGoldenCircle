@@ -176,3 +176,17 @@ strong,b{font-weight:600}
   .reveal{transform:translateY(16px);transition:opacity .45s ease,transform .45s ease}
   .reveal.visible{transform:none}
 }
+
+
+/* ===== Added motion: circle orbit + node highlight ===== */
+.orbit{position:absolute;left:50%;top:50%;border-radius:50%;pointer-events:none;animation:orbitSpin 70s linear infinite}
+.orbit.o1{width:390px;height:390px;margin:-195px 0 0 -195px}
+.orbit.o2{width:260px;height:260px;margin:-130px 0 0 -130px;animation-duration:48s;animation-direction:reverse}
+.orbit::after{content:"";position:absolute;top:-3px;left:50%;width:6px;height:6px;margin-left:-3px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px rgba(255,177,50,.75)}
+@keyframes orbitSpin{to{transform:rotate(360deg)}}
+.diagram-node strong{--c0:var(--text);animation:nodeLit 10s infinite}
+.diagram-node small{--c0:#6c6861;animation:nodeLit 10s infinite}
+.node-1 *{animation-delay:0s!important}.node-2 *{animation-delay:2s!important}.node-3 *{animation-delay:4s!important}.node-4 *{animation-delay:6s!important}.node-5 *{animation-delay:8s!important}
+@keyframes nodeLit{0%{color:var(--c0)}3%,17%{color:var(--gold)}20%,100%{color:var(--c0)}}
+.circle-diagram:not(.in-view) .orbit,.circle-diagram:not(.in-view) .diagram-node *{animation-play-state:paused}
+@media(max-width:650px){.orbit.o1{width:300px;height:300px;margin:-150px 0 0 -150px}.orbit.o2{width:205px;height:205px;margin:-102px 0 0 -102px}}
