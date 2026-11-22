@@ -173,6 +173,6 @@ strong,b{font-weight:600}
 
 /* Touch devices: lighter, faster reveal (no parallax, no stagger) */
 @media(hover:none),(pointer:coarse){
-  .reveal{transform:translateY(16px);transition:opacity .45s ease,transform .45s ease;transition-delay:0s!important}
+  .reveal{transform:translateY(16px);transition:opacity .45s ease,transform .45s ease}
   .reveal.visible{transform:none}
 }

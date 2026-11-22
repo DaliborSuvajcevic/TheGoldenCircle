@@ -229,8 +229,8 @@ document.querySelectorAll('a.brand[href="#top"]').forEach(a=>a.addEventListener(
   document.querySelectorAll('.reveal').forEach(el=>{
     const sibs=[...el.parentElement.children].filter(c=>c.classList.contains('reveal'));
     const i=sibs.indexOf(el);
-    if(fine && i>0 && !el.classList.contains('visible')){
-      el.style.transitionDelay=Math.min(i,5)*90+'ms';
+    if(i>0 && !el.classList.contains('visible')){
+      el.style.transitionDelay=Math.min(i,fine?5:3)*(fine?90:60)+'ms';
       setTimeout(()=>{el.style.transitionDelay=''},2500+i*90);
     }
   });
