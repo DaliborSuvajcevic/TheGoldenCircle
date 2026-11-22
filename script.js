@@ -1,3 +1,7 @@
+/* Always start at the top on load/refresh (no restored scroll position, no leftover #section hash). */
+if('scrollRestoration' in history){history.scrollRestoration='manual'}
+if(location.hash){history.replaceState(null,'',location.pathname+location.search)}
+window.scrollTo(0,0);
 // ============================================================
 // THE GOLDEN CIRCLE — SITE CONFIGURATION
 // Edit the products below to add real prices, images and links.
@@ -192,3 +196,41 @@ function applyLang(lang, save = true) {
 
 document.querySelectorAll(".lang-btn").forEach((btn) => btn.addEventListener("click", () => applyLang(btn.dataset.lang)));
 applyLang(getInitialLang(), false);
+
+/* Crown / brand click: scroll all the way to the top (the #top anchor is the fixed header, so it did nothing). */
+document.querySelectorAll('a.brand[href="#top"]').forEach(a=>a.addEventListener('click',e=>{
+  e.preventDefault();
+  window.scrollTo({top:0,behavior:'smooth'});
+  const nav=document.getElementById('main-navigation'); if(nav) nav.classList.remove('open');
+}));
+
+/* Scroll motion: gold progress line, soft image parallax, staggered reveals. */
+(function(){
+  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce) return;
+  const bar=document.createElement('div'); bar.className='scroll-progress'; bar.setAttribute('aria-hidden','true'); document.body.appendChild(bar);
+  const imgs=[...document.querySelectorAll('.hero-image-wrap>img,.about-image img')];
+  let ticking=false;
+  function update(){
+    ticking=false;
+    const max=document.documentElement.scrollHeight-innerHeight;
+    bar.style.transform='scaleX('+(max>0?Math.min(scrollY/max,1):0)+')';
+    imgs.forEach(img=>{
+      const r=img.parentElement.getBoundingClientRect();
+      if(r.bottom<0||r.top>innerHeight) return;
+      const center=r.top+r.height/2-innerHeight/2;
+      img.style.setProperty('--py',(center*-0.06).toFixed(1)+'px');
+    });
+  }
+  addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(update)}},{passive:true});
+  addEventListener('resize',update); update();
+  // stagger siblings inside grids/lists, then clear the delay so hover stays instant
+  document.querySelectorAll('.reveal').forEach(el=>{
+    const sibs=[...el.parentElement.children].filter(c=>c.classList.contains('reveal'));
+    const i=sibs.indexOf(el);
+    if(i>0 && !el.classList.contains('visible')){
+      el.style.transitionDelay=Math.min(i,5)*90+'ms';
+      setTimeout(()=>{el.style.transitionDelay=''},2500+i*90);
+    }
+  });
+})();

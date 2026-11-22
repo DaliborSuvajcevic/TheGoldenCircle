@@ -108,3 +108,54 @@ body { line-height: 1.65; }
 @media (max-width:650px){
   .lang-switch{margin-left:auto;margin-right:14px}
 }
+
+
+/* ===== BRAND KIT TYPOGRAPHY (test) =====
+   Headings, product names, stat: Playfair Display 500.
+   Text, UI, labels, numbers: Inter 400 / 500 / 600. No DM Mono.
+   Small text: min 11px, contrast >= 4.5:1. */
+:root{--mono:Inter,Arial,sans-serif}
+h1,h2,h3{font-family:var(--serif);font-weight:500}
+.hero h1{font-size:clamp(48px,6.2vw,92px);line-height:1;letter-spacing:-.025em}
+.section-head h2{font-size:clamp(40px,4.6vw,68px);line-height:1.04;letter-spacing:-.02em}
+.about-copy h2{font-size:clamp(38px,4.4vw,62px);line-height:1.05;letter-spacing:-.02em}
+.community-copy h2{font-size:clamp(40px,4.4vw,62px);line-height:1.02;letter-spacing:-.02em}
+.final-cta h2{font-size:clamp(50px,7vw,96px);line-height:.98;letter-spacing:-.03em}
+.eco-card h3{font-size:clamp(30px,3.5vw,48px);letter-spacing:-.02em;line-height:1.05}
+.principle h3{font-size:20px;letter-spacing:-.005em}
+.system-row h3{font-size:28px;letter-spacing:-.01em}
+.product-info h3{font-size:26px;letter-spacing:-.01em}
+.hero h1 em,.section-head h2 em,.about-copy h2 em,.final-cta h2 em{font-style:italic;font-weight:500}
+.community-stat strong{font-weight:500}
+strong,b{font-weight:600}
+.brand,.footer-brand,.brand-name{font-weight:600}
+.nav a{font-weight:500}
+.btn{font-weight:600;font-size:11px;letter-spacing:.16em}
+/* labels: Inter 600, wide tracking, never below 11px */
+.eyebrow,.hero-meta,.hero-stamp span,.image-index,.scroll-cue,.diagram-center,.diagram-node small,.principle span,.card-top,.card-bottom,.system-no,.system-row span,.product-price,.product-link,.community-stat span,.final-cta>p:not(.eyebrow),.footer-top>p,.footer-links,.footer-bottom,.lang-switch,.product-media-missing::after{font-family:var(--sans);font-weight:600;font-size:11px;letter-spacing:.16em}
+.eyebrow{letter-spacing:.2em}
+.diagram-node strong{font-size:12px;font-weight:600}
+.system-no{font-size:13px}
+.principle span{font-size:12px}
+.risk-note,.footer-disclaimer{font-family:var(--sans);font-weight:400;font-size:12px;letter-spacing:.01em;line-height:1.8}
+@media(max-width:650px){
+  .hero h1{font-size:42px;line-height:1.04}
+  .section-head h2{font-size:36px}
+  .about-copy h2{font-size:36px}
+  .community-copy h2{font-size:38px}
+  .final-cta h2{font-size:46px}
+  .hero-meta{font-size:11px}
+  .card-top,.card-bottom,.final-cta>p:not(.eyebrow),.footer-top>p,.footer-links,.footer-bottom{font-size:11px;letter-spacing:.12em}
+  .eco-card h3{font-size:32px}
+}
+
+/* ===== Scroll motion (test): restrained, premium ===== */
+.scroll-progress{position:fixed;top:0;left:0;right:0;height:2px;z-index:60;background:var(--gold);transform-origin:0 50%;transform:scaleX(0);pointer-events:none}
+.hero-image-wrap>img,.about-image img{transform:translate3d(0,var(--py,0px),0) scale(1.08);will-change:transform}
+.reveal{transform:translateY(34px)}
+.reveal.visible{transform:none}
+@media(prefers-reduced-motion:reduce){.scroll-progress{display:none}.hero-image-wrap>img,.about-image img{transform:none}}
+
+/* Community: space between the text and the Discord button */
+.community-copy .btn{margin-top:36px}
+@media(max-width:650px){.community-copy .btn{margin-top:30px}}
