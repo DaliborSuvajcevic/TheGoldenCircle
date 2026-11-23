@@ -211,3 +211,10 @@ strong,b{font-weight:600}
 .nav a.nav-access{color:var(--gold)}
 #app-access{scroll-margin-top:100px}
 @media(max-width:900px){.access-block{grid-template-columns:1fr;gap:28px;padding:32px 24px}}
+
+/* New official logo (Nov 2026): horizontal line-crown logo in header and footer.
+   Gold #FFB132 stays true: no desaturation on brand images. */
+.brand-logo{display:block;height:36px;width:auto;max-width:100%}
+.brand-logo-footer{height:30px}
+.hero-stamp img{filter:none}
+@media(max-width:650px){.brand-logo{height:28px}.brand-logo-footer{height:26px}}
